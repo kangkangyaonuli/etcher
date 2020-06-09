@@ -330,7 +330,7 @@ export class FlashStep extends React.PureComponent<
 				{this.state.showDriveSelectorModal && (
 					<TargetSelectorModal
 						cancel={() => this.setState({ showDriveSelectorModal: false })}
-						close={(targets: DrivelistTarget[]) => {
+						done={(targets: DrivelistTarget[]) => {
 							const selectedDrives = selection.getSelectedDrives();
 							if (_.isEmpty(targets)) {
 								_.each(

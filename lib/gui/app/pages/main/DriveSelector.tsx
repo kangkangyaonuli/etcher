@@ -137,7 +137,7 @@ export const DriveSelector = ({
 			{showTargetSelectorModal && (
 				<TargetSelectorModal
 					cancel={() => setShowTargetSelectorModal(false)}
-					close={(selectedTargets: DrivelistTarget[]) => {
+					done={(selectedTargets: DrivelistTarget[]) => {
 						const selectedDrives = getSelectedDrives();
 						if (_.isEmpty(selectedTargets)) {
 							_.each(_.map(selectedDrives, 'device'), deselectDrive);
